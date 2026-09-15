@@ -1,38 +1,38 @@
 # carlosrodrigorivero.github.io
 
-CV web de Carlos Rodrigo Rivero. Sitio estático, sin build ni dependencias.
+Web CV for Carlos Rodrigo Rivero. Static site, no build step, no dependencies.
 
-**En vivo:** https://carlosrodrigorivero.github.io
-**Web principal:** https://carlosrodrigorivero.web.app
+**Live:** https://carlosrodrigorivero.github.io
+**Main site:** https://carlosrodrigorivero.web.app
 
-Un único CV — **Director IT & Innovación** — en español e inglés, con tema
-claro/oscuro y descarga del PDF correspondiente.
+A single CV — **IT Director & Innovation** — in Spanish and English, with a
+light/dark theme and a download link for the matching PDF.
 
-## Estructura
+## Layout
 
 ```
-index.html      Maquetación, estilos y render. No suele hacer falta tocarlo.
-cv-data.js      TODO el contenido: textos, experiencia, formación, contacto.
-assets/foto.jpg Foto de perfil.
-pdf/            Los 2 PDFs (ES/EN) del perfil Director IT.
-.nojekyll       Le dice a GitHub Pages que sirva los ficheros tal cual.
+index.html      Markup, styles and rendering. Rarely needs touching.
+cv-data.js      ALL the content: copy, experience, education, contact details.
+assets/photo.jpg Profile photo.
+pdf/            The two PDFs (ES/EN) for the IT Director profile.
+.nojekyll       Tells GitHub Pages to serve the files as-is.
 ```
 
-## Cambiar el contenido
+## Changing the content
 
-Edita **`cv-data.js`** y haz push. Nada más.
+Edit **`cv-data.js`** and push. That's it.
 
 ```bash
-git add -A && git commit -m "Actualizar experiencia" && git push
+git add -A && git commit -m "Update experience" && git push
 ```
 
-GitHub Pages republica solo en 1-2 minutos. Si no ves el cambio, es caché del
-navegador: Ctrl+F5.
+GitHub Pages redeploys on its own within a minute or two. If you don't see the
+change, it's the browser cache: Ctrl+F5.
 
-## Regenerar los PDFs
+## Regenerating the PDFs
 
-Los PDFs salen de `../scripts/generate_cvs.py`, que es la fuente de verdad del
-texto. Si cambias algo ahí:
+The PDFs come from `../scripts/generate_cvs.py`, which is the source of truth for
+the copy. After changing anything there:
 
 ```bash
 python ../scripts/generate_cvs.py
@@ -40,49 +40,51 @@ cp ../CVs/Carlos/Spanish/CV_DirectorIT_Innovacion_CarlosRodrigoRivero.pdf pdf/
 cp ../CVs/Carlos/English/CV_ITDirector_Innovation_CarlosRodrigoRivero.pdf pdf/
 ```
 
-Y replicar el cambio en `cv-data.js`, que lleva su propia copia del texto.
+Then mirror the change in `cv-data.js`, which keeps its own copy of the text.
 
-## Volver a publicar varios perfiles
+## Publishing more than one profile again
 
-La web soporta varios perfiles (Jefe de Proyecto, Desarrollador); se retiraron el
-15 sept 2026 para publicar solo el más fuerte. La versión de 3 perfiles está
-guardada **fuera del repo**, en:
+The site supports multiple profiles (Project Manager, Developer); they were
+pulled on 15 Sept 2026 to publish only the strongest one. The three-profile
+version is kept **outside this repo**, at:
 
 ```
-../web-archivo/cv-data-3perfiles.js
+../web-archive/cv-data-3profiles.js
 ```
 
-Copia los objetos que quieras de ahí al array `PROFILES` de `cv-data.js`, y sus
-PDFs desde `../CVs/Carlos/` a `pdf/`. El selector de perfil reaparece solo en
-cuanto hay más de uno.
+Copy whichever profile objects you want into the `PROFILES` array in
+`cv-data.js`, and their PDFs from `../CVs/Carlos/` into `pdf/`. The profile
+switcher reappears by itself as soon as there is more than one.
 
-## Teléfono
+## Phone number
 
-Por defecto el teléfono **no** se muestra en la web (sí sigue en los PDFs), para
-no dejarlo expuesto a scrapers. Para mostrarlo, en `cv-data.js`:
+The phone number is **not** shown on the site by default (it is still in the
+PDFs), to keep it away from scrapers. To show it, in `cv-data.js`:
 
 ```js
 showPhone: true,
 ```
 
-## URLs compartibles
+## Shareable URLs
 
-El idioma va en la URL, así que puedes enlazar directamente uno u otro:
+The language lives in the URL, so you can link straight to either one:
 
-- `https://carlosrodrigorivero.github.io/` — español (por defecto)
-- `https://carlosrodrigorivero.github.io/?l=en` — inglés
+- `https://carlosrodrigorivero.github.io/` — Spanish (default)
+- `https://carlosrodrigorivero.github.io/?l=en` — English
 
 ## SEO
 
-`index.html` lleva `<link rel="canonical">` apuntando a `carlosrodrigorivero.web.app`.
-Eso le dice a Google cuál es la web original, para que no trate esta como
-contenido duplicado y no reparta la autoridad entre las dos.
+`index.html` carries a `<link rel="canonical">` pointing at
+`carlosrodrigorivero.web.app`. That tells Google which site is the original, so
+this one is not treated as duplicate content and the ranking authority is not
+split between the two.
 
-**Si algún día esta pasa a ser la principal**, quita ese canonical de `index.html`
-y actualiza `CONFIG.canonical` en `cv-data.js`.
+**If this ever becomes the main site**, drop that canonical from `index.html` and
+update `CONFIG.canonical` in `cv-data.js`.
 
-## Imprimir
+## Printing
 
-Ctrl+P sobre la web da un A4 con el texto vectorial, pero ocupa 3 páginas: la web
-lleva el contenido completo, sin los recortes que hacen que el PDF quepa en una
-hoja. Para enviar a alguien, usa el botón **Descargar PDF**, que da el de 1 página.
+Ctrl+P produces A4 with real vector text, but it runs to three pages: the site
+carries the full content, without the trimming that makes the PDF fit on one
+sheet. To send the CV to someone, use the **Download PDF** button, which gives
+the single-page version.

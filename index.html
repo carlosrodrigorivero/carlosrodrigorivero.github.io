@@ -7,14 +7,14 @@
 <meta name="description" content="CV de Carlos Rodrigo Rivero: Director de IT en Spika Tech, jefe de proyecto del Fondo Europeo de Defensa (CASSATA, SESIOP, EISNET) e investigador doctoral en detección de Parkinson con VR e IA. Madrid.">
 <meta name="author" content="Carlos Rodrigo Rivero">
 
-<!-- La web principal es carlosrodrigorivero.web.app. Este canonical evita que
-     Google trate esta copia como contenido duplicado y reparta la autoridad. -->
+<!-- The main site is carlosrodrigorivero.web.app. This canonical stops Google
+     from treating this copy as duplicate content and splitting the authority. -->
 <link rel="canonical" href="https://carlosrodrigorivero.web.app">
 
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Carlos Rodrigo Rivero — Director IT & Innovación">
 <meta property="og:description" content="Director de IT, jefe de proyecto del Fondo Europeo de Defensa e investigador doctoral en VR e IA aplicadas a salud.">
-<meta property="og:image" content="https://carlosrodrigorivero.github.io/assets/foto.jpg">
+<meta property="og:image" content="https://carlosrodrigorivero.github.io/assets/photo.jpg">
 <meta property="og:url" content="https://carlosrodrigorivero.web.app">
 <meta name="twitter:card" content="summary">
 
@@ -30,17 +30,17 @@
   "@type": "Person",
   "name": "Carlos Rodrigo Rivero",
   "url": "https://carlosrodrigorivero.web.app",
-  "image": "https://carlosrodrigorivero.github.io/assets/foto.jpg",
-  "jobTitle": "Director de IT",
+  "image": "https://carlosrodrigorivero.github.io/assets/photo.jpg",
+  "jobTitle": "IT Director",
   "email": "mailto:carlosrodrivero@gmail.com",
   "address": { "@type": "PostalAddress", "addressLocality": "Madrid", "addressCountry": "ES" },
   "worksFor": { "@type": "Organization", "name": "Spika Tech, S.L." },
   "alumniOf": [
     { "@type": "CollegeOrUniversity", "name": "Universidad Rey Juan Carlos" }
   ],
-  "knowsAbout": ["Gestión de proyectos europeos", "European Defence Fund", "Angular",
-                 "Python", "Cloud computing", "Realidad virtual", "Machine learning",
-                 "Ciberseguridad"],
+  "knowsAbout": ["EU project management", "European Defence Fund", "Angular",
+                 "Python", "Cloud computing", "Virtual reality", "Machine learning",
+                 "Cybersecurity"],
   "sameAs": [
     "https://carlosrodrigorivero.web.app",
     "https://github.com/carlosrodrigorivero",
@@ -88,7 +88,7 @@
 }
 
 *{box-sizing:border-box}
-[hidden]{display:none !important}   /* .group es display:flex y anularia a [hidden] */
+[hidden]{display:none !important}   /* .group is display:flex and would override [hidden] */
 html{-webkit-text-size-adjust:100%}
 body{
   margin:0; background:var(--page); color:var(--ink);
@@ -141,7 +141,7 @@ h1,h2,h3{margin:0; line-height:1.2; font-weight:700}
 .btn-dl:hover{color:#fff; filter:brightness(1.08)}
 .btn-icon{padding:7px 11px; font-size:15px; line-height:1}
 
-/* ── Hoja ─────────────────────────────────────────────────────────────────── */
+/* ── Sheet ─────────────────────────────────────────────────────────────────── */
 .sheet{
   max-width:1120px; margin:26px auto 60px; background:var(--card);
   border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden;
@@ -274,7 +274,7 @@ h1,h2,h3{margin:0; line-height:1.2; font-weight:700}
   .job .when{margin-left:0; width:100%}
 }
 
-/* ── Impresión ────────────────────────────────────────────────────────────── */
+/* ── Print ────────────────────────────────────────────────────────────── */
 @media print{
   @page{size:A4; margin:9mm}
   :root{--page:#fff; --card:#fff; --ink:#111; --ink-soft:#333; --ink-faint:#777;
@@ -316,7 +316,7 @@ h1,h2,h3{margin:0; line-height:1.2; font-weight:700}
 
 <main class="sheet" id="main">
   <header class="masthead">
-    <img id="photo" src="assets/foto.jpg" alt="Carlos Rodrigo Rivero" width="104" height="104">
+    <img id="photo" src="assets/photo.jpg" alt="Carlos Rodrigo Rivero" width="104" height="104">
     <div>
       <h1 id="hName">Carlos Rodrigo Rivero</h1>
       <div class="role" id="hRole"></div>
@@ -357,14 +357,14 @@ h1,h2,h3{margin:0; line-height:1.2; font-weight:700}
     });
   };
 
-  // ── Estado: se lee de la URL (?p=cto&l=es) para poder compartir un perfil ──
+  // ── State: read from the URL (?p=cto&l=es) so a profile can be shared ────
   var params  = new URLSearchParams(location.search);
   var profile = PROFILES.find(function(p){ return p.id === params.get("p"); }) || PROFILES[0];
   var lang    = params.get("l") === "en" ? "en" : "es";
 
   var root = document.documentElement;
 
-  // ── Tema ──────────────────────────────────────────────────────────────────
+  // ── Theme ──────────────────────────────────────────────────────────────────
   try{
     var saved = localStorage.getItem("cv-theme");
     if(saved === "dark" || saved === "light") root.setAttribute("data-theme", saved);
@@ -379,7 +379,7 @@ h1,h2,h3{margin:0; line-height:1.2; font-weight:700}
     try{ localStorage.setItem("cv-theme", next); }catch(e){}
   });
 
-  // ── Bloques del sidebar ───────────────────────────────────────────────────
+  // ── Sidebar blocks ───────────────────────────────────────────────────
   function dots(level){
     var h = '<span class="dots" role="img" aria-label="' + level + ' de 5">';
     for(var i = 1; i <= 5; i++) h += '<i class="' + (i <= level ? "on" : "") + '"></i>';
@@ -429,7 +429,7 @@ h1,h2,h3{margin:0; line-height:1.2; font-weight:700}
            li.join("") + "</ul></section>";
   }
 
-  // ── Bloques del cuerpo ────────────────────────────────────────────────────
+  // ── Body blocks ────────────────────────────────────────────────────
   function bodySection(sec){
     var h = '<section class="sec"><h2><span class="mark"></span>' + esc(sec.title) + "</h2>";
     if(sec.type === "exp"){
@@ -499,8 +499,8 @@ h1,h2,h3{margin:0; line-height:1.2; font-weight:700}
     document.getElementById("foot").innerHTML =
       t.alsoAt + ' <a href="' + esc(CONFIG.canonical) + '">' + esc(CONFIG.site) + "</a>";
 
-    // Botones de perfil. Con un unico perfil el selector sobra, asi que se oculta;
-    // reaparece solo si vuelves a anadir perfiles a PROFILES en cv-data.js.
+    // Profile buttons. With a single profile the switcher is pointless, so it
+    // hides; it returns if you add profiles back to PROFILES in cv-data.js.
     var pg = document.getElementById("profileGroup");
     pg.hidden = PROFILES.length < 2;
     pg.innerHTML = pg.hidden ? "" :
@@ -510,7 +510,7 @@ h1,h2,h3{margin:0; line-height:1.2; font-weight:700}
                (p.id === profile.id) + '">' + esc(p.label[lang]) + "</button>";
       }).join("");
 
-    // Botones de idioma
+    // Language buttons
     document.getElementById("langGroup").innerHTML =
       '<span class="group-label">' + esc(t.lang) + "</span>" +
       ["es", "en"].map(function(l){
@@ -518,7 +518,7 @@ h1,h2,h3{margin:0; line-height:1.2; font-weight:700}
                (l === lang) + '">' + l.toUpperCase() + "</button>";
       }).join("");
 
-    // URL compartible sin recargar
+    // Shareable URL, without reloading
     var q = "?p=" + profile.id + "&l=" + lang;
     history.replaceState(null, "", q);
   }

@@ -1,16 +1,16 @@
 /* ============================================================================
-   Contenido del CV — Carlos Rodrigo Rivero
-   Fuente: scripts/generate_cvs.py (mismo texto que los PDFs)
+   CV content — Carlos Rodrigo Rivero
+   Source: scripts/generate_cvs.py (same copy as the PDFs)
 
-   Edita SOLO este fichero para cambiar el contenido. index.html no se toca.
+   Edit ONLY this file to change the content. index.html stays untouched.
    ========================================================================== */
 
 const CONFIG = {
   name: "Carlos Rodrigo Rivero",
-  photo: "assets/foto.jpg",
+  photo: "assets/photo.jpg",
 
-  // Web principal. Genera el <link rel="canonical"> para que Google sepa
-  // cual es la original y no trate esta copia como contenido duplicado.
+  // Main site. Drives the <link rel="canonical"> so Google knows which one is
+  // the original and does not treat this copy as duplicate content.
   canonical: "https://carlosrodrigorivero.web.app",
 
   email:    "carlosrodrivero@gmail.com",
@@ -19,8 +19,8 @@ const CONFIG = {
   linkedin: "https://www.linkedin.com/in/carlos-rodrigo-rivero/",
   phone:    "+34 616 98 82 41",
 
-  // false = el telefono NO aparece en la web publica (sigue estando en los PDFs).
-  // Ponlo a true si quieres mostrarlo. Ver README.md.
+  // false = the phone number is NOT shown on the public site (it is still in
+  // the PDFs). Set it to true to show it. See README.md.
   showPhone: false,
 };
 
@@ -45,7 +45,7 @@ const LANGS = {
 };
 
 const UI = {
-  // "location" es solo la ciudad, a proposito. Este fichero se sirve publico.
+  // "location" is the city only, deliberately. This file is served publicly.
   es: { profile: "Perfil", lang: "Idioma", download: "Descargar PDF",
         contact: "Contacto", location: "Madrid",
         skip: "Ir al contenido", theme: "Cambiar tema",
@@ -57,9 +57,9 @@ const UI = {
 };
 
 /* --------------------------------------------------------------------------
-   PERFILES
-   sidebar: lista de secciones. type = bullets | dots | list | edu
-   sections: lista de secciones del cuerpo. type = exp | proj | research
+   PROFILES
+   sidebar:  list of sidebar sections. type = bullets | dots | list | edu
+   sections: list of body sections.    type = exp | proj | research
    -------------------------------------------------------------------------- */
 
 const PROFILES = [
@@ -167,8 +167,8 @@ const PROFILES = [
   },
 },
 
-/* Los perfiles "Jefe de Proyecto" y "Desarrollador" se retiraron el 15 sept 2026:
-   la web publica solo el de Director IT. Siguen en el historial de git
-   (git show HEAD~1:cv-data.js) y sus PDFs en CVs/Carlos/.
-   El selector de perfil se oculta solo mientras haya un unico perfil. */
+/* The "Project Manager" and "Developer" profiles were pulled on 15 Sept 2026:
+   the site publishes the IT Director one only. They are kept outside this repo,
+   in ../web-archive/cv-data-3profiles.js, and their PDFs in CVs/Carlos/.
+   The profile switcher hides itself while there is a single profile. */
 ];
