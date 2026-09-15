@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carlos Rodrigo Rivero — Director IT & Innovación</title>
+<meta name="description" content="CV de Carlos Rodrigo Rivero: Director de IT en Spika Tech, jefe de proyecto del Fondo Europeo de Defensa (CASSATA, SESIOP, EISNET) e investigador doctoral en detección de Parkinson con VR e IA. Madrid.">
+<meta name="author" content="Carlos Rodrigo Rivero">
+
+<!-- La web principal es carlosrodrigorivero.web.app. Este canonical evita que
+     Google trate esta copia como contenido duplicado y reparta la autoridad. -->
+<link rel="canonical" href="https://carlosrodrigorivero.web.app">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Carlos Rodrigo Rivero — Director IT & Innovación">
+<meta property="og:description" content="Director de IT, jefe de proyecto del Fondo Europeo de Defensa e investigador doctoral en VR e IA aplicadas a salud.">
+<meta property="og:image" content="https://carlosrodrigorivero.github.io/assets/foto.jpg">
+<meta property="og:url" content="https://carlosrodrigorivero.web.app">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%238A4FFF'/><text y='.9em' x='50%25' text-anchor='middle' font-size='62' font-family='sans-serif' font-weight='700' fill='white'>C</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Carlos Rodrigo Rivero",
+  "url": "https://carlosrodrigorivero.web.app",
+  "image": "https://carlosrodrigorivero.github.io/assets/foto.jpg",
+  "jobTitle": "Director de IT",
+  "email": "mailto:carlosrodrivero@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Madrid", "addressCountry": "ES" },
+  "worksFor": { "@type": "Organization", "name": "Spika Tech, S.L." },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Universidad Rey Juan Carlos" }
+  ],
+  "knowsAbout": ["Gestión de proyectos europeos", "European Defence Fund", "Angular",
+                 "Python", "Cloud computing", "Realidad virtual", "Machine learning",
+                 "Ciberseguridad"],
+  "sameAs": [
+    "https://carlosrodrigorivero.web.app",
+    "https://github.com/carlosrodrigorivero",
+    "https://www.linkedin.com/in/carlos-rodrigo-rivero/"
+  ]
+}
+</script>
+
+<style>
+/* ── Tokens ───────────────────────────────────────────────────────────────── */
+:root{
+  --accent:#8A4FFF;
+  --sidebar-bg:#19103A;
+  --header-bg:#201548;
+
+  --page:#eceef2;
+  --card:#ffffff;
+  --ink:#1b1d22;
+  --ink-soft:#4a4f58;
+  --ink-faint:#787f8a;
+  --rule:#e2e5ea;
+  --pitch-bg:#f5f6f9;
+  --chip:#ffffff;
+  --chip-ink:#4a4f58;
+  --chip-rule:#d4d8df;
+  --sb-ink:#ffffff;
+  --sb-soft:#b9bed0;
+  --sb-dot-off:#3a3a5c;
+
+  --radius:10px;
+  --shadow:0 1px 2px rgba(16,20,30,.06), 0 10px 34px rgba(16,20,30,.10);
+  --sans:"Lato", ui-sans-serif, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --page:#101217; --card:#181b22; --ink:#e9ecf1; --ink-soft:#b0b7c2;
+    --ink-faint:#858d99; --rule:#282d37; --pitch-bg:#1e222b;
+    --chip:#20242d; --chip-ink:#b0b7c2; --chip-rule:#333945;
+  }
+}
+:root[data-theme="dark"]{
+  --page:#101217; --card:#181b22; --ink:#e9ecf1; --ink-soft:#b0b7c2;
+  --ink-faint:#858d99; --rule:#282d37; --pitch-bg:#1e222b;
+  --chip:#20242d; --chip-ink:#b0b7c2; --chip-rule:#333945;
+}
+
+*{box-sizing:border-box}
+[hidden]{display:none !important}   /* .group es display:flex y anularia a [hidden] */
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--page); color:var(--ink);
+  font:400 15px/1.55 var(--sans);
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+h1,h2,h3{margin:0; line-height:1.2; font-weight:700}
+
+.skip{
+  position:absolute; left:-9999px; top:0; z-index:99;
+  background:var(--accent); color:#fff; padding:10px 16px; border-radius:0 0 8px 0;
+}
+.skip:focus{left:0}
+
+/* ── Toolbar ──────────────────────────────────────────────────────────────── */
+.toolbar{
+  position:sticky; top:0; z-index:20;
+  background:var(--page);
+  background:color-mix(in srgb, var(--page) 88%, transparent);
+  backdrop-filter:saturate(150%) blur(10px);
+  border-bottom:1px solid var(--rule);
+}
+.toolbar-in{
+  max-width:1120px; margin:0 auto; padding:10px 20px;
+  display:flex; flex-wrap:wrap; gap:10px 14px; align-items:center;
+}
+.group{display:flex; gap:6px; align-items:center; flex-wrap:wrap}
+.group-label{
+  font-size:10.5px; font-weight:700; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--ink-faint); margin-right:2px;
+}
+.btn{
+  font:inherit; font-size:13px; font-weight:700;
+  padding:7px 13px; border-radius:99px; cursor:pointer;
+  background:var(--chip); color:var(--chip-ink);
+  border:1px solid var(--chip-rule);
+  transition:background .15s, color .15s, border-color .15s;
+}
+.btn:hover{border-color:var(--accent); color:var(--accent)}
+.btn[aria-pressed="true"]{
+  background:var(--accent); border-color:var(--accent); color:#fff;
+}
+.btn:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+.spacer{flex:1 1 auto}
+.btn-dl{
+  background:var(--accent); border-color:var(--accent); color:#fff;
+  display:inline-flex; align-items:center; gap:7px; text-decoration:none;
+}
+.btn-dl:hover{color:#fff; filter:brightness(1.08)}
+.btn-icon{padding:7px 11px; font-size:15px; line-height:1}
+
+/* ── Hoja ─────────────────────────────────────────────────────────────────── */
+.sheet{
+  max-width:1120px; margin:26px auto 60px; background:var(--card);
+  border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden;
+}
+.masthead{
+  background:var(--header-bg); color:#fff;
+  padding:26px 34px 24px; border-bottom:3px solid var(--accent);
+  display:flex; gap:24px; align-items:center;
+}
+.masthead img{
+  width:104px; height:104px; border-radius:50%; object-fit:cover; flex:none;
+  border:3px solid var(--accent);
+}
+.masthead h1{font-size:30px; letter-spacing:-.015em}
+.role{color:var(--accent); font-weight:700; font-size:14px; margin-top:5px}
+.contact-line{
+  margin-top:10px; font-size:12.5px; color:#c2c7d4;
+  display:flex; flex-wrap:wrap; gap:4px 14px;
+}
+.contact-line a{color:#c2c7d4; text-decoration:none; border-bottom:1px solid transparent}
+.contact-line a:hover{color:#fff; border-bottom-color:var(--accent)}
+
+.cols{display:grid; grid-template-columns:288px 1fr}
+
+/* ── Sidebar ──────────────────────────────────────────────────────────────── */
+.side{background:var(--sidebar-bg); color:var(--sb-ink); padding:26px 22px 34px}
+.side h2{
+  font-size:11px; letter-spacing:.11em; text-transform:uppercase;
+  color:var(--accent); padding-bottom:5px; border-bottom:1px solid var(--accent);
+  margin-bottom:12px;
+}
+.side section + section{margin-top:22px}
+.side ul{list-style:none; margin:0; padding:0}
+.side li{font-size:13px; line-height:1.45; color:var(--sb-ink)}
+
+.contact-list li{
+  display:flex; gap:9px; align-items:baseline; margin-bottom:7px; font-size:13px;
+  word-break:break-word;
+}
+.contact-list .ic{color:var(--accent); flex:none; width:15px; text-align:center; font-size:12px}
+.contact-list a{color:var(--sb-ink); text-decoration:none; border-bottom:1px solid transparent}
+.contact-list a:hover{border-bottom-color:var(--accent)}
+
+.bullets li{position:relative; padding-left:15px; margin-bottom:8px}
+.bullets li::before{
+  content:""; position:absolute; left:0; top:.55em;
+  width:5px; height:5px; border-radius:50%; background:var(--accent);
+}
+.plain li{color:var(--sb-soft); margin-bottom:7px}
+
+.dot-row{display:flex; align-items:center; gap:10px; margin-bottom:9px}
+.dot-row .lbl{flex:1; font-size:12.5px}
+.dots{display:flex; gap:4px; flex:none}
+.dots i{width:7px; height:7px; border-radius:50%; background:var(--sb-dot-off); display:block}
+.dots i.on{background:var(--accent)}
+
+.edu li{margin-bottom:11px}
+.edu .t{display:block; font-weight:700; font-size:12.5px; color:var(--accent)}
+.edu .s{display:block; font-size:11.5px; color:var(--sb-soft); margin-top:1px}
+
+/* ── Main ─────────────────────────────────────────────────────────────────── */
+.main{padding:26px 34px 36px; min-width:0}
+.pitch{
+  background:var(--pitch-bg); border-left:3px solid var(--accent);
+  border-radius:0 6px 6px 0; padding:14px 18px; margin-bottom:26px;
+  font-style:italic; font-size:14.5px; color:var(--ink-soft); line-height:1.6;
+}
+.sec{margin-bottom:28px}
+.sec > h2{
+  font-size:13px; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--ink); display:flex; align-items:center; gap:12px; margin-bottom:16px;
+}
+.sec > h2::after{content:""; flex:1; height:1px; background:var(--rule)}
+.sec > h2 .mark{width:26px; height:3px; background:var(--accent); border-radius:2px; flex:none}
+
+.job{margin-bottom:20px}
+.job:last-child{margin-bottom:0}
+.job h3{font-size:15.5px; color:var(--ink)}
+.job .meta{
+  display:flex; flex-wrap:wrap; gap:2px 12px; align-items:baseline;
+  margin:3px 0 9px; padding-bottom:7px; border-bottom:1px solid var(--rule);
+}
+.job .co{font-weight:700; font-size:13.5px; color:var(--accent)}
+.job .when{font-size:12.5px; font-style:italic; color:var(--ink-faint); margin-left:auto}
+.job ul{list-style:none; margin:0; padding:0}
+.job li{
+  position:relative; padding-left:16px; margin-bottom:6px;
+  font-size:14px; color:var(--ink-soft); line-height:1.5;
+}
+.job li::before{
+  content:""; position:absolute; left:2px; top:.6em;
+  width:5px; height:5px; border-radius:50%; background:var(--accent);
+}
+
+.card-item{margin-bottom:14px}
+.card-item:last-child{margin-bottom:0}
+.card-item .t{font-weight:700; font-size:14.5px; color:var(--accent)}
+.card-item .d{font-size:14px; color:var(--ink-soft); margin-top:2px; line-height:1.5}
+
+.research{
+  background:var(--pitch-bg); border-left:3px solid var(--accent);
+  border-radius:0 6px 6px 0; padding:15px 18px;
+}
+.research .t{font-weight:700; font-size:15px; color:var(--ink)}
+.research .s{font-size:13px; font-style:italic; color:var(--accent); margin:3px 0 8px}
+.research .d{font-size:14px; color:var(--ink-soft); line-height:1.55}
+
+.cta{
+  margin-top:26px; background:var(--accent); color:#fff; border-radius:8px;
+  padding:15px 20px; display:flex; flex-wrap:wrap; gap:8px 18px; align-items:center;
+  justify-content:center; text-align:center; font-weight:700; font-size:14.5px;
+}
+.cta a{color:#fff; text-decoration:none; border-bottom:1px solid rgba(255,255,255,.5)}
+
+.foot{
+  max-width:1120px; margin:0 auto 50px; padding:0 20px;
+  font-size:12.5px; color:var(--ink-faint); text-align:center;
+}
+.foot a{color:var(--accent)}
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+@media (max-width:860px){
+  .cols{grid-template-columns:1fr}
+  .masthead{flex-direction:column; text-align:center; padding:24px 20px}
+  .masthead h1{font-size:25px}
+  .contact-line{justify-content:center}
+  .main{padding:22px 20px 30px}
+  .side{padding:22px 20px 28px}
+  .sheet{margin:14px 12px 40px; border-radius:8px}
+  .job .when{margin-left:0; width:100%}
+}
+
+/* ── Impresión ────────────────────────────────────────────────────────────── */
+@media print{
+  @page{size:A4; margin:9mm}
+  :root{--page:#fff; --card:#fff; --ink:#111; --ink-soft:#333; --ink-faint:#777;
+        --rule:#e0e0e0; --pitch-bg:#f5f5f7}
+  html,body{background:#fff !important; font-size:9.6pt}
+  .toolbar,.foot,.skip{display:none !important}
+  .sheet{
+    margin:0; max-width:none; box-shadow:none; border-radius:0;
+    -webkit-print-color-adjust:exact; print-color-adjust:exact;
+  }
+  .masthead,.side,.cta,.dots i,.pitch,.research{
+    -webkit-print-color-adjust:exact; print-color-adjust:exact;
+  }
+  .cols{grid-template-columns:34mm 1fr}
+  .side{padding:14px 11px}
+  .main{padding:14px 16px}
+  .masthead{padding:14px 18px}
+  .masthead img{width:74px; height:74px}
+  .masthead h1{font-size:19pt}
+  .job,.card-item,.sec{break-inside:avoid; page-break-inside:avoid}
+  .sec > h2{break-after:avoid; page-break-after:avoid}
+  a{text-decoration:none}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main" id="skipLink">Ir al contenido</a>
+
+<nav class="toolbar" aria-label="Opciones del CV">
+  <div class="toolbar-in">
+    <div class="group" id="profileGroup" role="group" aria-label="Perfil"></div>
+    <div class="group" id="langGroup" role="group" aria-label="Idioma"></div>
+    <span class="spacer"></span>
+    <button class="btn btn-icon" id="themeBtn" type="button" aria-label="Cambiar tema" title="Cambiar tema">◐</button>
+    <a class="btn btn-dl" id="dlBtn" href="#" download>↓ <span>Descargar PDF</span></a>
+  </div>
+</nav>
+
+<main class="sheet" id="main">
+  <header class="masthead">
+    <img id="photo" src="assets/foto.jpg" alt="Carlos Rodrigo Rivero" width="104" height="104">
+    <div>
+      <h1 id="hName">Carlos Rodrigo Rivero</h1>
+      <div class="role" id="hRole"></div>
+      <div class="contact-line" id="hContact"></div>
+    </div>
+  </header>
+
+  <div class="cols">
+    <aside class="side" id="side" aria-label="Datos y competencias"></aside>
+    <div class="main" id="body"></div>
+  </div>
+</main>
+
+<p class="foot" id="foot"></p>
+
+<noscript>
+  <div style="max-width:700px;margin:30px auto;padding:0 20px">
+    <h2>Carlos Rodrigo Rivero — Madrid</h2>
+    <p>Director de IT en Spika Tech · Jefe de proyecto del Fondo Europeo de Defensa
+       (CASSATA, SESIOP, EISNET) · Investigador doctoral en detección de Parkinson
+       mediante realidad virtual e IA (EID-URJC).</p>
+    <p>Contacto: <a href="mailto:carlosrodrivero@gmail.com">carlosrodrivero@gmail.com</a> ·
+       <a href="https://carlosrodrigorivero.web.app">carlosrodrigorivero.web.app</a></p>
+    <p>CV en PDF:
+       <a href="pdf/CV_DirectorIT_Innovacion_CarlosRodrigoRivero.pdf">español</a> ·
+       <a href="pdf/CV_ITDirector_Innovation_CarlosRodrigoRivero.pdf">english</a></p>
+  </div>
+</noscript>
+
+<script src="cv-data.js"></script>
+<script>
+(function(){
+  "use strict";
+
+  var esc = function(s){
+    return String(s).replace(/[&<>"']/g, function(c){
+      return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];
+    });
+  };
+
+  // ── Estado: se lee de la URL (?p=cto&l=es) para poder compartir un perfil ──
+  var params  = new URLSearchParams(location.search);
+  var profile = PROFILES.find(function(p){ return p.id === params.get("p"); }) || PROFILES[0];
+  var lang    = params.get("l") === "en" ? "en" : "es";
+
+  var root = document.documentElement;
+
+  // ── Tema ──────────────────────────────────────────────────────────────────
+  try{
+    var saved = localStorage.getItem("cv-theme");
+    if(saved === "dark" || saved === "light") root.setAttribute("data-theme", saved);
+  }catch(e){}
+
+  document.getElementById("themeBtn").addEventListener("click", function(){
+    var isDark = root.getAttribute("data-theme") === "dark" ||
+      (!root.hasAttribute("data-theme") &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches);
+    var next = isDark ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try{ localStorage.setItem("cv-theme", next); }catch(e){}
+  });
+
+  // ── Bloques del sidebar ───────────────────────────────────────────────────
+  function dots(level){
+    var h = '<span class="dots" role="img" aria-label="' + level + ' de 5">';
+    for(var i = 1; i <= 5; i++) h += '<i class="' + (i <= level ? "on" : "") + '"></i>';
+    return h + "</span>";
+  }
+
+  function sidebarSection(sec){
+    var h = "<section><h2>" + esc(sec.title) + "</h2>";
+    if(sec.type === "bullets"){
+      h += '<ul class="bullets">' + sec.items.map(function(t){
+        return "<li>" + esc(t) + "</li>";
+      }).join("") + "</ul>";
+    }else if(sec.type === "list"){
+      h += '<ul class="plain">' + sec.items.map(function(t){
+        return "<li>" + esc(t) + "</li>";
+      }).join("") + "</ul>";
+    }else if(sec.type === "dots"){
+      h += sec.items.map(function(it){
+        return '<div class="dot-row"><span class="lbl">' + esc(it[0]) + "</span>" +
+               dots(it[1]) + "</div>";
+      }).join("");
+    }else if(sec.type === "edu"){
+      h += '<ul class="edu">' + sec.items.map(function(it){
+        return '<li><span class="t">' + esc(it[0]) + "</span>" +
+               (it[1] ? '<span class="s">' + esc(it[1]) + "</span>" : "") + "</li>";
+      }).join("") + "</ul>";
+    }
+    return h + "</section>";
+  }
+
+  function contactSection(t){
+    var li = [];
+    if(CONFIG.showPhone){
+      li.push('<li><span class="ic">T</span><a href="tel:' +
+              esc(CONFIG.phone.replace(/\s/g, "")) + '">' + esc(CONFIG.phone) + "</a></li>");
+    }
+    li.push('<li><span class="ic">@</span><a href="mailto:' + esc(CONFIG.email) + '">' +
+            esc(CONFIG.email) + "</a></li>");
+    li.push('<li><span class="ic">W</span><a href="' + esc(CONFIG.canonical) +
+            '" rel="me">' + esc(CONFIG.site) + "</a></li>");
+    li.push('<li><span class="ic">in</span><a href="' + esc(CONFIG.linkedin) +
+            '" rel="me noopener" target="_blank">LinkedIn</a></li>');
+    li.push('<li><span class="ic">gh</span><a href="' + esc(CONFIG.github) +
+            '" rel="me noopener" target="_blank">GitHub</a></li>');
+    li.push('<li><span class="ic">·</span>' + esc(t.location) + "</li>");
+    return "<section><h2>" + esc(t.contact) + '</h2><ul class="contact-list">' +
+           li.join("") + "</ul></section>";
+  }
+
+  // ── Bloques del cuerpo ────────────────────────────────────────────────────
+  function bodySection(sec){
+    var h = '<section class="sec"><h2><span class="mark"></span>' + esc(sec.title) + "</h2>";
+    if(sec.type === "exp"){
+      h += sec.items.map(function(j){
+        return '<article class="job"><h3>' + esc(j[0]) + "</h3>" +
+          '<div class="meta"><span class="co">' + esc(j[1]) + "</span>" +
+          '<span class="when">' + esc(j[2]) + "</span></div><ul>" +
+          j[3].map(function(b){ return "<li>" + esc(b) + "</li>"; }).join("") +
+          "</ul></article>";
+      }).join("");
+    }else if(sec.type === "proj"){
+      h += sec.items.map(function(p){
+        return '<div class="card-item"><div class="t">' + esc(p[0]) + "</div>" +
+               '<div class="d">' + esc(p[1]) + "</div></div>";
+      }).join("");
+    }else if(sec.type === "research"){
+      h += sec.items.map(function(r){
+        return '<div class="research"><div class="t">' + esc(r[0]) + "</div>" +
+               '<div class="s">' + esc(r[1]) + "</div>" +
+               '<div class="d">' + esc(r[2]) + "</div></div>";
+      }).join("");
+    }
+    return h + "</section>";
+  }
+
+  // ── Render ────────────────────────────────────────────────────────────────
+  function render(){
+    var t = UI[lang];
+
+    root.style.setProperty("--accent", profile.accent);
+    root.style.setProperty("--sidebar-bg", profile.sidebarBg);
+    root.style.setProperty("--header-bg", profile.headerBg);
+    root.lang = lang;
+
+    document.title = CONFIG.name + " — " + profile.subtitle[lang];
+    document.getElementById("hName").textContent = CONFIG.name;
+    document.getElementById("hRole").textContent = profile.subtitle[lang];
+    document.getElementById("photo").alt = CONFIG.name;
+    document.getElementById("skipLink").textContent = t.skip;
+    document.getElementById("themeBtn").setAttribute("aria-label", t.theme);
+    document.getElementById("themeBtn").title = t.theme;
+
+    var hc = [];
+    if(CONFIG.showPhone) hc.push(esc(CONFIG.phone));
+    hc.push('<a href="mailto:' + esc(CONFIG.email) + '">' + esc(CONFIG.email) + "</a>");
+    hc.push('<a href="' + esc(CONFIG.canonical) + '">' + esc(CONFIG.site) + "</a>");
+    hc.push(esc(t.location));
+    document.getElementById("hContact").innerHTML =
+      hc.map(function(x){ return "<span>" + x + "</span>"; }).join("");
+
+    document.getElementById("side").innerHTML =
+      contactSection(t) + profile.sidebar[lang].map(sidebarSection).join("");
+
+    document.getElementById("body").innerHTML =
+      '<p class="pitch">' + esc(profile.pitch[lang]) + "</p>" +
+      profile.sections[lang].map(bodySection).join("") +
+      '<div class="cta"><span>' +
+        (lang === "es" ? "¿Hablamos?" : "Let's talk") +
+      '</span><a href="mailto:' + esc(CONFIG.email) + '">' + esc(CONFIG.email) + "</a>" +
+      '<a href="' + esc(CONFIG.linkedin) + '" target="_blank" rel="noopener">LinkedIn</a></div>';
+
+    var dl = document.getElementById("dlBtn");
+    dl.href = profile.pdf[lang];
+    dl.setAttribute("download", profile.pdf[lang].split("/").pop());
+    dl.querySelector("span").textContent = t.download;
+
+    document.getElementById("foot").innerHTML =
+      t.alsoAt + ' <a href="' + esc(CONFIG.canonical) + '">' + esc(CONFIG.site) + "</a>";
+
+    // Botones de perfil. Con un unico perfil el selector sobra, asi que se oculta;
+    // reaparece solo si vuelves a anadir perfiles a PROFILES en cv-data.js.
+    var pg = document.getElementById("profileGroup");
+    pg.hidden = PROFILES.length < 2;
+    pg.innerHTML = pg.hidden ? "" :
+      '<span class="group-label">' + esc(t.profile) + "</span>" +
+      PROFILES.map(function(p){
+        return '<button class="btn" type="button" data-p="' + p.id + '" aria-pressed="' +
+               (p.id === profile.id) + '">' + esc(p.label[lang]) + "</button>";
+      }).join("");
+
+    // Botones de idioma
+    document.getElementById("langGroup").innerHTML =
+      '<span class="group-label">' + esc(t.lang) + "</span>" +
+      ["es", "en"].map(function(l){
+        return '<button class="btn" type="button" data-l="' + l + '" aria-pressed="' +
+               (l === lang) + '">' + l.toUpperCase() + "</button>";
+      }).join("");
+
+    // URL compartible sin recargar
+    var q = "?p=" + profile.id + "&l=" + lang;
+    history.replaceState(null, "", q);
+  }
+
+  document.addEventListener("click", function(ev){
+    var b = ev.target.closest("button[data-p], button[data-l]");
+    if(!b) return;
+    if(b.dataset.p) profile = PROFILES.find(function(p){ return p.id === b.dataset.p; });
+    if(b.dataset.l) lang = b.dataset.l;
+    render();
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
